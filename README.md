@@ -171,8 +171,10 @@ On Linux or macOS, the script can be automated using `cron`:
 - Ensure required Python packages are installed in the environment
 
 ## Notes
+- In production, environment variables should be used for sensitive data
 - Output file is created locally (or via Docker volume)
 - For Docker, use `host.docker.internal` instead of `localhost` for DB connection
+- Application can be extended to support batch processing for large datasets if required.
 
 ## Key Design Notes
 - The solution is database-agnostic at query level, meaning any table or structure can be used as long as the SQL query is valid
